@@ -71,6 +71,10 @@ border-right: rgb(233, 16, 16);
 width: 300px;
 }
 
+hr {
+  border-top: 2px dashed rgb(10, 7, 7);
+}
+
 /* centre items
 margin: 0;
 position: absolute;
