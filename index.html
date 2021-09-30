@@ -6,223 +6,200 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoice Bill</title>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="htmlfile" href="invoice.html">
+    <link rel="js" href="javafile.js">
+
+	
 </head>
 
-<body>
+<body> 
+	<div id="print">
 
-    <!-- Section one for shop name address data and invoice number -->
+		<!-- Section one for shop name address data and invoice number -->
+		<section class="section1">
+			<h1>Invoice</h1>
+			<h3>Company Name and logo</h3>
+			<h4>
+				<Address class="address">Contact No:9764152416 <br>
+					38, xxxxx xxxxx, <br> Karmala, Solapur, 413203.
+				</Address>
+			</h4>
+			<p class="invo">
+				<label for="date">Date:</label>
+				<input type="date" name="date">
+				<br>
+				<br>
+				<label for="invoice no">Invoice Number</label>
+				<input type="text" size="5" maxlength="5">
+			</p>
+		</section>
+		<!-- Section two for cust. name address and mobile number -->
+		<form class="die-input">
+			<label for="name">&nbsp; Billed To:&nbsp; &nbsp; </label>
+			<input type="" name="" id="name" autocomplete="off"><br>
+			<label for="address">&nbsp; Address:&nbsp;&nbsp;&nbsp;&nbsp; </label>
+			<input type="" name="" id="address"><br>
+			<label for="phone">Mobile No:&nbsp;&nbsp; </label>
+			<input type="text" id="phone">
+		</form>
+		<br>
+		<hr>
+		<!-- section three for description -->
+		<section class="section3">
+			<table>
+				<tr>
+					<th>Product</th>
+					<th>Qty</th>
+					<th>Rate</th>
+					<th>Amount</th>
+				</tr>
+				<tr>
+					<td>xxxxx</td>
+					<td><input id="qty0" type="text" size="8" maxlength="8" placeholder="0" oninput="calculate1()">
+					</td>
+					<td>
+						&#8377;
+						<input id="rate1" type="text" size="8" name="rupy" maxlength="8" placeholder="0"
+							onkeyup="calculate1()">
+					</td>
+					<td>
+						&#8377; <span id="rate11">0</span>
+					</td>
+				</tr>
+				<tr>
+					<td>xxxxx</td>
+					<td><input id="qty2" type="text" size="8" maxlength="8" placeholder="0" oninput="calculate1()">
+					</td>
+					<td>
+						&#8377;
+						<input id="rate2" type="text" size="8" name="rupy" maxlength="8" placeholder="0"
+							onkeyup="calculate1()">
+					</td>
+					<td>
+						&#8377; <span id="rate22">0</span>
+					</td>
+				</tr>
+				<tr>
+					<td>xxxxx</td>
+					<td><input id="qty3" type="text" size="8" maxlength="8" placeholder="0" oninput="calculate1()">
+					</td>
+					<td>
+						&#8377;
+						<input id="rate3" type="text" size="8" name="rupy" maxlength="8" placeholder="0"
+							onkeyup="calculate1()">
+					</td>
+					<td>
+						&#8377; <span id="rate33">0</span>
+					</td>
+				</tr>
+				<tr>
+					<td>xxxxx</td>
+					<td><input id="qty4" type="text" size="8" maxlength="8" placeholder="0" oninput="calculate1()">
+					</td>
+					<td>
+						&#8377;
+						<input id="rate4" type="text" size="8" name="rupy" maxlength="8" placeholder="0"
+							onkeyup="calculate1()">
+					</td>
+					<td>
+						&#8377; <span id="rate44">0</span>
+					</td>
+				</tr>
+				<tr>
+					<td>xxxxx</td>
+					<td><input id="qty5" type="text" size="8" maxlength="8" placeholder="0" oninput="calculate1()">
+					</td>
+					<td>
+						&#8377;
+						<input id="rate5" type="text" size="8" name="rupy" maxlength="8" placeholder="0"
+							onkeyup="calculate1()">
+					</td>
+					<td>
+						&#8377; <span id="rate55">0</span>
+					</td>
+				</tr>
+				<tr>
+					<td>xxxxx</td>
+					<td><input id="qty6" type="text" size="8" maxlength="8" placeholder="0" oninput="calculate1()">
+					</td>
+					<td>
+						&#8377;
+						<input id="rate6" type="text" size="8" name="rupy" maxlength="8" placeholder="0"
+							onkeyup="calculate1()">
+					</td>
+					<td>
+						&#8377; <span id="rate66">0</span>
+					</td>
+				</tr>
+				<tr>
+					<td>xxxxx</td>
+					<td><input id="qty7" type="text" size="8" maxlength="8" placeholder="0" oninput="calculate1()">
+					</td>
+					<td>
+						&#8377;
+						<input id="rate7" type="text" size="8" name="rupy" maxlength="8" placeholder="0"
+							onkeyup="calculate1()">
+					</td>
+					<td>
+						&#8377; <span id="rate77">0</span>
+					</td>
+				</tr>
+				<tr>
+					<td>xxxxx</td>
+					<td><input id="qty8" type="text" size="8" maxlength="8" placeholder="0" oninput="calculate1()">
+					</td>
+					<td>
+						&#8377;
+						<input id="rate8" type="text" size="8" name="rupy" maxlength="8" placeholder="0"
+							onkeyup="calculate1()">
+					</td>
+					<td>
+						&#8377; <span id="rate88">0</span>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						Total Qty: &nbsp;<span id="tqty">0</span>
+					</td>
+					<td></td>
+					<td>
+						Total Amount:&nbsp; &#8377;<span id="amount">0</span>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<table align="right" class="table2">
+				<tr>
+					<td>
+						<label for="othercharges">Other Charges: &#8377;</label>
+						<input type="text" size="8" maxlength="8" placeholder="0" id="charges" oninput="calculate1()"
+							onkeyup="calculate1()"><br><br>
+						<label for="baki">Baki: &emsp;&emsp;&emsp;&emsp;</label>
+						&#8377; <input ype="text" size="8" maxlength="8" placeholder="0" id="baki"
+							oninput="calculate1()" onkeyup="calculate1()"><br>
+						<h3>Grand Total: &nbsp; &#8377;<span id="grandtotal">0</ span>
+						</h3>
+					</td>
+				</tr>
+			</table>
+			<br><br>
+			<h3 id="" class="footer">Thank You!!</h3>
+		</section>
+	
+	</div>
+	
 
-    <section class="section1">
-        <h1>Invoice</h1>
-        <h3>Company Name and logo</h3>
-        <h4>
-            <Address class="address">Contact No:9764152416 <br>
-                38, xxxxx xxxxx, <br> Karmala, Solapur, 413203.
-            </Address>
-        </h4>
-        <p class="invo">
-            <label for="date">Date:</label>
-            <input type="date" name="date">
-            <br>
-            <br>
-            <label for="invoice no">Invoice Number</label>
-            <input type="text" size="5" maxlength="5">
-        </p>
-    </section>
+	<button class="btn" onclick="printDiv('print')" >Print!!</button>
+    <a href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share">Share via Whatsapp</a>
+	
+<script>
 
-    <!-- Section two for cust. name address and mobile number -->
+</script>
 
-
-
-    <form class="die-input">
-
-        <label for="name">&nbsp; Billed To:&nbsp; &nbsp; </label>
-        <input type="" name="" id="name" autocomplete="off"><br>
-
-
-        <label for="address">&nbsp; Address:&nbsp;&nbsp;&nbsp;&nbsp; </label>
-        <input type="" name="" id="address"><br>
-
-
-        <label for="phone">Mobile No:&nbsp;&nbsp; </label>
-        <input type="text" id="phone">
-
-    </form>
-<br>
-    <hr>
+	<script src="javafile.js"></script>
     
-    <!-- section three for description -->
-    <section class="section3">
-        <table>
-            <tr>
-                <th>Product</th>
-                <th>Qty</th>
-                <th>Rate</th>
-                <th>Amount</th>
-            </tr>
-            <tr>
-                <td>xxxxx</td>
-                <td><input id="qty0" type="text" size="8" maxlength="8" placeholder="0" oninput="calculate1()"> </td>
-                <td>
-                    &#8377;
-                    <input id="rate1" type="text" size="8" name="rupy" maxlength="8" placeholder="0"
-                        onkeyup="calculate1()">
-                </td>
-                <td>
-
-                    &#8377; <span id="rate11">0</span>
-
-
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>xxxxx</td>
-                <td><input id="qty2" type="text" size="8" maxlength="8" placeholder="0" oninput="calculate1()"> </td>
-                <td>
-                    &#8377;
-
-                    <input id="rate2" type="text" size="8" name="rupy" maxlength="8" placeholder="0"
-                        onkeyup="calculate1()">
-
-                </td>
-                <td>
-                    &#8377; <span id="rate22">0</span>
-                </td>
-            </tr>
-            <tr>
-                <td>xxxxx</td>
-                <td><input id="qty3" type="text" size="8" maxlength="8" placeholder="0" oninput="calculate1()"> </td>
-                <td>
-                    &#8377;
-                    <input id="rate3" type="text" size="8" name="rupy" maxlength="8" placeholder="0"
-                        onkeyup="calculate1()">
-                </td>
-                <td>
-                    &#8377; <span id="rate33">0</span>
-                </td>
-
-
-            </tr>
-
-            <tr>
-                <td>xxxxx</td>
-                <td><input id="qty4" type="text" size="8" maxlength="8" placeholder="0" oninput="calculate1()"> </td>
-                <td>
-                    &#8377;
-
-                    <input id="rate4" type="text" size="8" name="rupy" maxlength="8" placeholder="0"
-                        onkeyup="calculate1()">
-                </td>
-                <td>
-                    &#8377; <span id="rate44">0</span>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>xxxxx</td>
-                <td><input id="qty5" type="text" size="8" maxlength="8" placeholder="0" oninput="calculate1()"> </td>
-                <td>
-                    &#8377;
-
-                    <input id="rate5" type="text" size="8" name="rupy" maxlength="8" placeholder="0"
-                        onkeyup="calculate1()">
-
-                </td>
-                <td>
-                    &#8377; <span id="rate55">0</span>
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>xxxxx</td>
-                <td><input id="qty6" type="text" size="8" maxlength="8" placeholder="0" oninput="calculate1()"> </td>
-                <td>
-                    &#8377;
-
-                    <input id="rate6" type="text" size="8" name="rupy" maxlength="8" placeholder="0"
-                        onkeyup="calculate1()">
-
-                </td>
-                <td>
-                    &#8377; <span id="rate66">0</span>
-
-                </td>
-            </tr>
-            <tr>
-                <td>xxxxx</td>
-                <td><input id="qty7" type="text" size="8" maxlength="8" placeholder="0" oninput="calculate1()"> </td>
-                <td>
-                    &#8377;
-
-                    <input id="rate7" type="text" size="8" name="rupy" maxlength="8" placeholder="0"
-                        onkeyup="calculate1()">
-
-                </td>
-                <td>
-                    &#8377; <span id="rate77">0</span>
-
-                </td>
-            </tr>
-            <tr>
-                <td>xxxxx</td>
-                <td><input id="qty8" type="text" size="8" maxlength="8" placeholder="0" oninput="calculate1()"> </td>
-                <td>
-                    &#8377;
-
-                    <input id="rate8" type="text" size="8" name="rupy" maxlength="8" placeholder="0"
-                        onkeyup="calculate1()">
-
-                </td>
-                <td>
-                    &#8377; <span id="rate88">0</span>
-                </td>
-
-            </tr>
-            <tr>
-                <td></td>
-                <td>
-                    Total Qty: &nbsp;<span id="tqty">0</span>
-
-                </td>
-                <td></td>
-                <td>
-                    Total Amount:&nbsp; &#8377;<span id="amount">0</span>
-                </td>
-            </tr>
-        </table>
-        <br>
-
-        <table align="right" class="table2">
-            <tr>
-                <td>
-                    <label for="othercharges">Other Charges: &#8377;</label>
-                    <input type="text" size="8" maxlength="8" placeholder="0" id="charges" oninput="calculate1()"
-                        onkeyup="calculate1()"><br><br>
-
-                    <label for="baki">Baki: &emsp;&emsp;&emsp;&emsp;</label>
-                    &#8377; <input ype="text" size="8" maxlength="8" placeholder="0" id="baki" oninput="calculate1()"
-                        onkeyup="calculate1()"><br>
-
-                    <h3>Grand Total: &nbsp; &#8377;<span id="grandtotal">0</span></h3>
-                </td>
-            </tr>
-        </table>
-
-
-    </section>
-    <script src="javafile.js"></script>
-    
-    <!-- <div class=""> -->
-    <!-- <a href="invoice.html"> -->
-    <!-- <button class="button" type="submit">Print!!!</button> </a> -->
-    <!-- </div> -->
-
 </body>
 
 </html>
