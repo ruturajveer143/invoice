@@ -55,15 +55,13 @@ function calculate1() {
 }
 
 
+function printDiv(print) {
+    var printContents = document.getElementById(print).innerHTML;
+    var originalContents = document.body.innerHTML;
 
+    document.body.innerHTML = printContents;
 
+    window.print();
 
-// function {
-    // document.getElementById("bill").innerHTML=smosaBill+kachoriBill+vadapavBill+maggiBill; //table statement
-    // document.getElementById("amount").innerHTML = Smosa*smosa_q+Kachori*kachori_q+Vadapav*vadapav_q+Maggi*maggi_q; // total amount
-// }
-// 
-// 
-// 
-// 
-// 
+    document.body.innerHTML = originalContents;
+}
