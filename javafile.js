@@ -1,7 +1,4 @@
-$('form#myId input').bind("change", function() {
-    var val = $(this).val();
-    $(this).attr('value',val);
-});
+
 
 //For 1 Product
 function calculate1() {
