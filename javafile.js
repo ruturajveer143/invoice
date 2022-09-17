@@ -1,3 +1,8 @@
+$('form#myId input').bind("change", function() {
+    var val = $(this).val();
+    $(this).attr('value',val);
+});
+
 //For 1 Product
 function calculate1() {
     var qty0 = document.getElementById('qty0').value;
