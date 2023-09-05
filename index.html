@@ -27,19 +27,19 @@
 			</h4>
 			<p class="invo">
 				<label for="date">दिनांक:</label>
-				<input type="date" name="date">
+				<input type="date" id="date" name="date">
 				<br>
 				<br>
 				<label for="invoice no">Invoice Number</label>
-				<input type="text" size="5" maxlength="5">
+				<input  id="invoiceno" type="text" size="5" maxlength="5">
 			</p>
 		</section>
 		<!-- Section two for cust. name address and mobile number -->
 		<form class="die-input">
 			<label for="name">&nbsp; Billed To:&nbsp; &nbsp; </label>
-			<input type="" name="" id="name" autocomplete="off"><br>
+			<input type="text" name="" id="name" autocomplete="off"><br>
 			<label for="address">&nbsp; Address:&nbsp;&nbsp;&nbsp;&nbsp; </label>
-			<input type="" name="" id="address"><br>
+			<input type="text" name="" id="address"><br>
 			<label for="phone">Mobile No:&nbsp;&nbsp; </label>
 			<input type="text" id="phone">
 		</form>
@@ -189,10 +189,9 @@
 		</section>
 	
 	</div>
-	
 
 	<button class="btn" onclick="printDiv('print')" >Print!!</button>
-    <a href="whatsapp://send?text=The text to share!" data-action="share/whatsapp/share">Share via Whatsapp</a>
+    <button onclick="sendWhatsAppMessage()">Share via Whatsapp</button>
 	
 <script>
 

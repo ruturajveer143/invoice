@@ -1,5 +1,29 @@
 
 
+
+
+
+
+//date
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Add 1 to month as it's 0-based index
+    const day = String(currentDate.getDate()).padStart(2, '0');
+    
+    const formattedDate = `${year}-${month}-${day}`;
+    
+    document.getElementById("date").value = formattedDate;
+
+    //Invoice Number Random
+    invoiceno=Math.floor(Math.random()*99999);
+    document.getElementById("invoiceno").value = invoiceno;
+
+
+    
+
+    
+  
+  
 //For 1 Product
 function calculate1() {
     var qty0 = document.getElementById('qty0').value;
@@ -66,4 +90,18 @@ function printDiv(print) {
     window.print();
 
     document.body.innerHTML = originalContents;
+
+
+    
+
+
+}
+
+function sendWhatsAppMessage() {
+    var phoneNumber = "917757808380";
+    var message = "Hi! Check out this PDF: " + "C:/Users/Ruturaj/Downloads/javascript%235.pdf";
+    var whatsappUrl = "https://api.whatsapp.com/send?phone=" + phoneNumber + "&text=" + encodeURIComponent(message);
+
+    // Open the WhatsApp URL in a new tab
+    window.open(whatsappUrl, "_blank");
 }
